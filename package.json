@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel server client",
+    "start": "npm-run-all --parallel client",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
