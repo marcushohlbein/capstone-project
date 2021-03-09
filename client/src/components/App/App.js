@@ -23,6 +23,8 @@ export default function App() {
 const AppGrid = styled.main`
   display: grid;
   width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
 `
 
 const ProductsContainer = styled.ul`

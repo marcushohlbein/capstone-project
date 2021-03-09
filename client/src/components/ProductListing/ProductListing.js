@@ -11,7 +11,7 @@ export default function ProductListing({
 }) {
   return (
     <ListItem>
-      <Image src={img} />
+      <Image src={img} alt={brand + ' - ' + model} />
       <Info>
         <Brand>{brand}</Brand>
         <Model>{model}</Model>
@@ -34,22 +34,22 @@ ProductListing.propTypes = {
 }
 
 const ListItem = styled.li`
-  font-family: Source Sans Pro, sans-serif;
   color: var(--color-grey);
   display: grid;
-  list-style: none;
   width: 100%;
+  list-style: none;
   border: 1px solid #f0f0f0;
   border-radius: 4px;
-  overflow: hidden;
 `
 
 const Image = styled.img`
-  width: 100%;
+  padding: 10px;
+  max-width: 100%;
 `
 
 const Info = styled.div`
-  padding: 5px;
+  padding: 5px 10px;
+  overflow: hidden;
 `
 
 const Brand = styled.div`
@@ -63,6 +63,10 @@ const Model = styled.h3`
   color: var(--color-darkgrey);
   font-weight: 700;
   font-size: 1em;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 const Meta = styled.div`
@@ -70,7 +74,7 @@ const Meta = styled.div`
   background: var(--color-lightgrey);
   align-items: center;
   justify-content: flex-end;
-  padding: 4px 5px;
+  padding: 4px 10px;
 `
 
 const Price = styled.div`
