@@ -9,6 +9,7 @@ describe('ProductListing', () => {
     expect(screen.getByText('Air Force 1')).toBeInTheDocument()
     expect(screen.getByText('79,99€')).toBeInTheDocument()
   })
+
   it('render the price tag red, if on sale', () => {
     render(
       <ProductListing
