@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel client",
+    "start": "npm-run-all --parallel server client",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cd client && npm test",
     "storybook": "cd client && npm run storybook",
     "postinstall": "cd client && npm install"
   },
