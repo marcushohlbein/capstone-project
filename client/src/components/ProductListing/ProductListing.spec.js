@@ -9,11 +9,6 @@ describe('ProductListing', () => {
     expect(screen.getByText('Air Force 1')).toBeInTheDocument()
     expect(screen.getByText('79,99€')).toBeInTheDocument()
   })
-  it('should display an overlay with available sizes on hover', () => {
-    render(<ProductListing />)
-    const { display } = getComputedStyle(screen.getByRole('div'))
-    expect(display).toBe('false')
-  })
   it('render the price tag red, if on sale', () => {
     render(
       <ProductListing
