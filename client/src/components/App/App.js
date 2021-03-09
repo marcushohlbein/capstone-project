@@ -11,7 +11,9 @@ export default function App() {
             key={products.id}
             img={products.media.thumbUrl}
             brand={products.brand}
-            model={products.name}
+            model={products.shoe
+              .split(' ')
+              .slice(products.brand.split(' ').length)}
             price={products.retailPrice}
           />
         ))}

@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 
@@ -86,9 +85,3 @@ const Price = styled.div`
     font-size: 1.4em;
   }
 `
-=======
-
-export default function ProductListing() {
-  return <></>
-}
->>>>>>> main
