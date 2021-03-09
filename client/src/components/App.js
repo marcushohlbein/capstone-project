@@ -20,7 +20,7 @@ export default function App() {
   )
 }
 
-const AppGrid = styled.div`
+const AppGrid = styled.main`
   display: grid;
   width: 100%;
 `
