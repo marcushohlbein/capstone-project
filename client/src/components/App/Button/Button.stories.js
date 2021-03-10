@@ -11,5 +11,4 @@ export const Primary = Template.bind({})
 
 Primary.args = {
   text: 'zum shop',
-  url: 'https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025',
 }
