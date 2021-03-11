@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 
-export default function ProductListing({
+export default function ProductList({
   img,
   brand,
   model,
@@ -25,7 +25,7 @@ export default function ProductListing({
   )
 }
 
-ProductListing.propTypes = {
+ProductList.propTypes = {
   img: PropTypes.string,
   brand: PropTypes.string,
   model: PropTypes.string,
@@ -40,6 +40,7 @@ const ListItem = styled.li`
   list-style: none;
   border: 1px solid #f0f0f0;
   border-radius: 4px;
+  text-decoration: none;
 `
 
 const Image = styled.img`

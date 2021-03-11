@@ -1,23 +1,41 @@
 import data from '../data/products.json'
 import styled from 'styled-components/macro'
-import ProductListing from './ProductListing/ProductListing'
+import ProductListing from './ProductList/ProductList'
+import ProductDetail from './ProductDetail/ProductDetail'
+
+import { Switch, Route, Link } from 'react-router-dom'
 
 export default function App() {
   return (
     <AppGrid>
-      <ProductsContainer>
-        {data.map(products => (
-          <ProductListing
-            key={products.id}
-            img={products.media.thumbUrl}
-            brand={products.brand}
-            model={products.shoe
-              .split(' ')
-              .slice(products.brand.split(' ').length)}
-            price={products.retailPrice}
-          />
-        ))}
-      </ProductsContainer>
+      <Switch>
+        <Route exact path="/">
+          <ProductsContainer>
+            {data.map(product => (
+              <Link
+                to={{
+                  pathname: `/${product.styleId}`,
+                  props: product,
+                }}
+              >
+                <ProductListing
+                  key={product.id}
+                  img={product.media.thumbUrl}
+                  brand={product.brand}
+                  model={product.shoe
+                    .split(' ')
+                    .slice(product.brand.split(' ').length)}
+                  price={product.retailPrice}
+                />
+              </Link>
+            ))}
+          </ProductsContainer>
+        </Route>
+        <Route
+          path="/:styleId"
+          render={props => <ProductDetail {...props} />}
+        />
+      </Switch>
     </AppGrid>
   )
 }

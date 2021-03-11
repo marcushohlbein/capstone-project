@@ -1,11 +1,11 @@
-import ProductListing from './ProductListing'
+import ProductList from './ProductList'
 
 export default {
-  title: 'ProductListing',
-  component: ProductListing,
+  title: 'ProductList',
+  component: ProductList,
 }
 
-const Template = args => <ProductListing {...args} />
+const Template = args => <ProductList {...args} />
 
 export const Primary = Template.bind({})
 export const onSale = Template.bind({})

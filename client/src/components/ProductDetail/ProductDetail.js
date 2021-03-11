@@ -4,23 +4,25 @@ import PropTypes from 'prop-types'
 
 import ShopListItem from '../ShopListItem/ShopListItem'
 
-export default function ProductDetail({ brand, model, SKU, img, shops }) {
+export default function ProductDetail(props) {
+  const { brand, shoe, styleId, media, shops } = props.location.props
+  const model = shoe.split(' ').slice(brand.split(' ').length)
   return (
     <ProductContainer>
       <ProductInfo>
         <ProductName>
           {brand} {model}
         </ProductName>
-        <ProductNumber>{SKU}</ProductNumber>
+        <ProductNumber>{styleId}</ProductNumber>
       </ProductInfo>
-      <ProductImage src={img} alt={brand + ' ' + model} />
+      <ProductImage src={media.imageUrl} alt={brand + ' ' + model} />
       <ShopListContainer>
         {shops.map((shops, i) => (
           <ShopListItem
             price={shops.price}
             shipping={shops.shipping}
             shopName={shops.shopName}
-            shopLogo="../../assets/brooklyn-shop.webp"
+            shopLogo={`../../assets/${shops.shopName}.webp`}
             shopUrl={shops.shopUrl}
           />
         ))}
@@ -32,8 +34,8 @@ export default function ProductDetail({ brand, model, SKU, img, shops }) {
 ShopListItem.propTypes = {
   brand: PropTypes.string,
   shoe: PropTypes.string,
-  SKU: PropTypes.string,
-  img: PropTypes.string,
+  styleId: PropTypes.string,
+  media: PropTypes.array,
   shops: PropTypes.array,
 }
 
