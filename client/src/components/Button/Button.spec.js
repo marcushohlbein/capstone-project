@@ -9,11 +9,6 @@ describe('Button', () => {
     expect(screen.getByText('ZUM SHOP')).toBeInTheDocument()
   })
 
-  it('render a button with red background color', () => {
-    render(<Button text={'zum shop'} />)
-    expect(screen.getByRole('button')).toHaveStyle('background-color: #e74c3c')
-  })
-
   it('calls onClick when clicking the button', () => {
     const clickCallback = jest.fn()
     render(<Button onHandleClick={clickCallback} text={'zum shop'} />)

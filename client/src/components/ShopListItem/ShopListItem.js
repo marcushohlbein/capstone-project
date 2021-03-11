@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import Button from '../App/Button/Button'
+import Button from '../Button/Button'
+import PropTypes from 'prop-types'
 
 export default function ShopListItem({
   price,
@@ -12,20 +13,23 @@ export default function ShopListItem({
   return (
     <ListContainer>
       <ShopInfo>
-        <ShopLogo
-          src={shopLogo}
-          alt={shopName}
-          height="45"
-          width="85"
-        ></ShopLogo>
+        <ShopLogo src={shopLogo} alt={shopName} height="45" width="85" />
         <PriceInfo>
-          <Price aria-label="price">{price}</Price>
-          <Shipping arial-label="shipping">{shipping}</Shipping>
+          <Price>{price}</Price>
+          <Shipping>{shipping}</Shipping>
         </PriceInfo>
       </ShopInfo>
       <Button text="Zum Shop" onHandleClick={() => gotoLink(shopUrl)} />
     </ListContainer>
   )
+}
+
+ShopListItem.propTypes = {
+  price: PropTypes.string,
+  shipping: PropTypes.string,
+  shopName: PropTypes.string,
+  shopLogo: PropTypes.string,
+  shopUrl: PropTypes.string,
 }
 
 function gotoLink(url) {
@@ -37,7 +41,7 @@ const ListContainer = styled.section`
   gap: 10px;
   grid-template-rows: repeat(2, minmax(auto 1fr));
   padding: 10px;
-  background: var(--color-lightgrey);
+  background: white;
 `
 
 const ShopInfo = styled.div`

@@ -1,6 +1,6 @@
-import data from '../../data/products.json'
+import data from '../data/products.json'
 import styled from 'styled-components/macro'
-import ProductListing from '../ProductListing/ProductListing'
+import ProductListing from './ProductListing/ProductListing'
 
 export default function App() {
   return (

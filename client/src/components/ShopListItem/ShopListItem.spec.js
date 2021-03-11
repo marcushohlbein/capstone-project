@@ -19,19 +19,6 @@ describe('ShopListItem', () => {
     expect(screen.getByRole('button')).toBeInTheDocument()
   })
 
-  it('render a list item with lightgrey background color', () => {
-    render(
-      <ShopListItem
-        price={'79,99€'}
-        shopName={'Brooklyn'}
-        shopLogo={brooklyn}
-        url={
-          'https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025'
-        }
-      />
-    )
-    expect(screen.getByRole('button')).toHaveStyle('background: #f0f0f0')
-  })
   it('render default value for shipping', () => {
     render(
       <ShopListItem
@@ -43,6 +30,8 @@ describe('ShopListItem', () => {
         }
       />
     )
-    //expect(screen.getByText('versandkostenfrei')).toBe(true)
+    expect(screen.getByText(/versandkostenfrei/i)).toHaveTextContent(
+      /versandkostenfrei/i
+    )
   })
 })
