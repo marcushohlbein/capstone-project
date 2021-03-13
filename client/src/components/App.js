@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import ProductListing from './ProductList/ProductList'
 import ProductDetail from './ProductDetail/ProductDetail'
 
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 export default function App() {
   return (
@@ -12,22 +12,7 @@ export default function App() {
         <Route exact path="/">
           <ProductsContainer>
             {data.map(product => (
-              <Link
-                to={{
-                  pathname: `/${product.styleId}`,
-                  props: product,
-                }}
-              >
-                <ProductListing
-                  key={product.id}
-                  img={product.media.thumbUrl}
-                  brand={product.brand}
-                  model={product.shoe
-                    .split(' ')
-                    .slice(product.brand.split(' ').length)}
-                  price={product.retailPrice}
-                />
-              </Link>
+              <ProductListing key={product.id} product={product} />
             ))}
           </ProductsContainer>
         </Route>
@@ -45,6 +30,7 @@ const AppGrid = styled.main`
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
+  padding: 10px;
 `
 
 const ProductsContainer = styled.ul`

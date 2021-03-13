@@ -7,6 +7,7 @@
     "name": "WTAPS Bones Black",
     "releaseDate": "2020-09-25",
     "retailPrice": 105,
+    "sale": true,
     "shoe": "Vans Era",
     "styleId": "VN0A4BVA20P1",
     "title": "Vans Era WTAPS Bones Black",
@@ -27,7 +28,7 @@
         "price": "74,99€",
         "shipping": "ab 5,90€ Versand",
         "shopName": "Def-Shop",
-        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
       }
     ],
     "media": {
@@ -48,6 +49,25 @@
     "styleId": "FW2280",
     "title": "adidas NMD R1 Star Wars Princess Leia (W)",
     "year": 2019,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://images.stockx.com/images/adidas-NMD-R1-Star-Wars-Princess-Leia-W.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606939800",
       "smallImageUrl": "https://images.stockx.com/images/adidas-NMD-R1-Star-Wars-Princess-Leia-W.png?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606939800",
@@ -66,6 +86,25 @@
     "styleId": "",
     "title": "Vans Authentic Feature Sinners Club Part II",
     "year": 2019,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://stockx.imgix.net/Vans-Authentic-Feature-Sinners-Club-Part-II.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1603481985",
       "smallImageUrl": "https://stockx.imgix.net/Vans-Authentic-Feature-Sinners-Club-Part-II.png?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1603481985",
@@ -84,6 +123,25 @@
     "styleId": "FW4322",
     "title": "adidas Ultra Boost 20 Chinese New Year Black Gold (2020)",
     "year": 2019,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://images.stockx.com/images/adidas-Ultra-Boost-20-Chinese-New-Year-Black-Gold-2020-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1609425335",
       "smallImageUrl": "https://images.stockx.com/images/adidas-Ultra-Boost-20-Chinese-New-Year-Black-Gold-2020-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1609425335",
@@ -102,6 +160,25 @@
     "styleId": "FW5328",
     "title": "adidas NMD V2 Grey Two Silver Metallic",
     "year": 2019,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://images.stockx.com/images/adidas-NMD-V2-Grey-Two-Silver-Metallic-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606165703",
       "smallImageUrl": "https://images.stockx.com/images/adidas-NMD-V2-Grey-Two-Silver-Metallic-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606165703",
@@ -120,6 +197,25 @@
     "styleId": "VN0A4ODRSOZ",
     "title": "Vans Sk8-Mid Pro Alltimers True White",
     "year": 2019,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://stockx.imgix.net/Vans-Sk8-Mid-Pro-Alltimers-True-White.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1575352365",
       "smallImageUrl": "https://stockx.imgix.net/Vans-Sk8-Mid-Pro-Alltimers-True-White.png?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1575352365",
@@ -138,6 +234,25 @@
     "styleId": "BQ5108-005",
     "title": "Nike D/MS/X Ghoswift Laser Orange",
     "year": 2019,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://images.stockx.com/Nike-D-MS-X-Ghoswift-Laser-Orange.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1603481985",
       "smallImageUrl": "https://images.stockx.com/Nike-D-MS-X-Ghoswift-Laser-Orange.png?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1603481985",
@@ -156,6 +271,25 @@
     "styleId": "DC8380-500",
     "title": "Nike LeBron 8 Lakers",
     "year": 2020,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://images.stockx.com/images/Nike-LeBron-8-Lakers-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1613354621",
       "smallImageUrl": "https://images.stockx.com/images/Nike-LeBron-8-Lakers-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1613354621",
@@ -174,6 +308,25 @@
     "styleId": "FV8927",
     "title": "adidas D Rose 11 Brenda",
     "year": 2020,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://images.stockx.com/images/adidas-D-Rose-11-Brenda.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606855962",
       "smallImageUrl": "https://images.stockx.com/images/adidas-D-Rose-11-Brenda.png?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606855962",
@@ -192,6 +345,25 @@
     "styleId": "FZ4986",
     "title": "adidas Yeezy Boost 380 Azure",
     "year": 2020,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://images.stockx.com/images/adidas-Yeezy-Boost-380-Azure-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1612901171",
       "smallImageUrl": "https://images.stockx.com/images/adidas-Yeezy-Boost-380-Azure-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1612901171",
@@ -210,6 +382,25 @@
     "styleId": "",
     "title": "Vans Slip-On Flour Shop (PS)",
     "year": 2020,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://stockx.imgix.net/Vans-Slip-On-Flour-Shop-PS.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1602067159",
       "smallImageUrl": "https://stockx.imgix.net/Vans-Slip-On-Flour-Shop-PS.png?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1602067159",
@@ -228,6 +419,25 @@
     "styleId": "",
     "title": "Vans Sk8-Hi Re-Issue Save Our Planet White Black",
     "year": 2019,
+    "shops": [
+      {
+        "price": "79,99€",
+        "shopName": "Brooklyn",
+        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+      },
+      {
+        "price": "69,99€",
+        "shipping": "ab 4,90€ Versand",
+        "shopName": "Asphaltgold",
+        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
+      },
+      {
+        "price": "74,99€",
+        "shipping": "ab 5,90€ Versand",
+        "shopName": "Def-Shop",
+        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+      }
+    ],
     "media": {
       "imageUrl": "https://images.stockx.com/Vans-Sk8-Hi-Re-Issue-Save-Our-Planet-White-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1603481985",
       "smallImageUrl": "https://images.stockx.com/Vans-Sk8-Hi-Re-Issue-Save-Our-Planet-White-Black.png?fit=fill&bg=FFFFFF&w=300&h=214&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1603481985",

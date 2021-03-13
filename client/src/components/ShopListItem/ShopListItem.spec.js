@@ -1,20 +1,18 @@
 import { render, screen } from '@testing-library/react'
 import ShopListItem from './ShopListItem'
-import brooklyn from '../../assets/brooklyn-shop.webp'
 
 describe('ShopListItem', () => {
-  it('render a shop logo, price tag and a button', () => {
+  it('render a shop name, price tag and a button', () => {
     render(
       <ShopListItem
         price={'79,99€'}
         shopName={'Brooklyn'}
-        shopLogo={brooklyn}
         url={
           'https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025'
         }
       />
     )
-    expect(screen.getByRole('img')).toBeInTheDocument()
+    expect(screen.getByText('Brooklyn')).toBeInTheDocument()
     expect(screen.getByText('79,99€')).toBeInTheDocument()
     expect(screen.getByRole('button')).toBeInTheDocument()
   })
@@ -24,7 +22,6 @@ describe('ShopListItem', () => {
       <ShopListItem
         price={'79,99€'}
         shopName={'Brooklyn'}
-        shopLogo={brooklyn}
         url={
           'https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025'
         }

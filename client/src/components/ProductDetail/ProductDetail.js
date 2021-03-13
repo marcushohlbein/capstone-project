@@ -17,13 +17,12 @@ export default function ProductDetail(props) {
       </ProductInfo>
       <ProductImage src={media.imageUrl} alt={brand + ' ' + model} />
       <ShopListContainer>
-        {shops.map((shops, i) => (
+        {shops.map((shop, i) => (
           <ShopListItem
-            price={shops.price}
-            shipping={shops.shipping}
-            shopName={shops.shopName}
-            shopLogo={`../../assets/${shops.shopName}.webp`}
-            shopUrl={shops.shopUrl}
+            price={shop.price}
+            shipping={shop.shipping}
+            shopName={shop.shopName}
+            shopUrl={shop.shopUrl}
           />
         ))}
       </ShopListContainer>
@@ -42,7 +41,6 @@ ShopListItem.propTypes = {
 const ProductContainer = styled.main`
   display: grid;
   gap: 20px;
-  background: var(--color-lightgrey);
 `
 
 const ProductInfo = styled.div`

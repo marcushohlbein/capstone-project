@@ -1,5 +1,5 @@
 import ShopListItem from './ShopListItem'
-import brooklyn from '../../assets/brooklyn-shop.webp'
+import brooklyn from '../../assets/brooklyn.webp'
 
 export default {
   title: 'ShopListItem',

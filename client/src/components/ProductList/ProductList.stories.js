@@ -1,4 +1,5 @@
 import ProductList from './ProductList'
+import { NavLink } from 'react-router-dom'
 
 export default {
   title: 'ProductList',
@@ -11,16 +12,27 @@ export const Primary = Template.bind({})
 export const onSale = Template.bind({})
 
 Primary.args = {
-  img: 'https://source.unsplash.com/random/280x200',
-  brand: 'Nike',
-  model: 'Air Force 1',
-  price: '79,99',
+  product: {
+    media: {
+      imageUrl: 'https://source.unsplash.com/random/280x200',
+    },
+
+    brand: 'Nike',
+    shoe: 'Air Force 1',
+    retailPrice: '79,99',
+    sale: false,
+  },
 }
 
 onSale.args = {
-  img: 'https://source.unsplash.com/random/200x200',
-  brand: 'Nike',
-  model: 'Air Force 1',
-  price: '79,99',
-  sale: true,
+  product: {
+    media: {
+      imageUrl: 'https://source.unsplash.com/random/280x200',
+    },
+
+    brand: 'Adidas',
+    shoe: 'Continental 80',
+    retailPrice: '59,99',
+    sale: true,
+  },
 }

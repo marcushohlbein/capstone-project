@@ -20,4 +20,5 @@ const ButtonElement = styled.button`
   color: white;
   font-weight: 700;
   font-size: 0.9em;
+  cursor: pointer;
 `

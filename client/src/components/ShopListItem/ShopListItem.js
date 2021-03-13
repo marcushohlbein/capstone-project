@@ -7,13 +7,12 @@ export default function ShopListItem({
   price,
   shipping = 'versandkostenfrei',
   shopName,
-  shopLogo,
   shopUrl,
 }) {
   return (
     <ListContainer>
       <ShopInfo>
-        <ShopLogo src={shopLogo} alt={shopName} height="45" width="85" />
+        <ShopName>{shopName}</ShopName>
         <PriceInfo>
           <Price>{price}</Price>
           <Shipping>{shipping}</Shipping>
@@ -28,7 +27,6 @@ ShopListItem.propTypes = {
   price: PropTypes.string,
   shipping: PropTypes.string,
   shopName: PropTypes.string,
-  shopLogo: PropTypes.string,
   shopUrl: PropTypes.string,
 }
 
@@ -41,7 +39,7 @@ const ListContainer = styled.section`
   gap: 10px;
   grid-template-rows: repeat(2, minmax(auto 1fr));
   padding: 10px;
-  background: white;
+  background: var(--color-lightgrey);
 `
 
 const ShopInfo = styled.div`
@@ -68,4 +66,6 @@ const Shipping = styled.div`
   color: var(--color-grey);
 `
 
-const ShopLogo = styled.img``
+const ShopName = styled.h4`
+  color: var(--color-darkgrey);
+`
