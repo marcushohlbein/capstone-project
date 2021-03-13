@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 import ShopListItem from '../ShopListItem/ShopListItem'
 
-export default function ProductDetail(props) {
-  const { brand, shoe, styleId, media, shops } = props.location.props
+export default function ProductDetail({ location }) {
+  const { brand, shoe, styleId, media, shops } = location.product
   const model = shoe.split(' ').slice(brand.split(' ').length)
   return (
     <ProductContainer>
