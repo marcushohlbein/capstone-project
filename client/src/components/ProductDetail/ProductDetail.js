@@ -6,7 +6,7 @@ import ShopListItem from '../ShopListItem/ShopListItem'
 
 export default function ProductDetail({ location }) {
   const { brand, shoe, styleId, media, shops } = location.product
-  const model = shoe.split(' ').slice(brand.split(' ').length)
+  const model = shoe.split(' ').slice(brand.split(' ').length).join(' ')
   return (
     <ProductContainer>
       <ProductInfo>
