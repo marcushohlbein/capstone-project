@@ -1,31 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
+import { NavLink } from 'react-router-dom'
 
-export default function ProductListing({
-  img,
-  brand,
-  model,
-  price,
-  sale = false,
-}) {
+export default function ProductList(props) {
+  const { styleId, media, brand, shoe, retailPrice, sale } = props.product
+  const model = shoe.split(' ').slice(brand.split(' ').length).join(' ')
   return (
-    <ListItem>
-      <Image src={img} alt={brand + ' - ' + model} />
+    <ListItem
+      as={NavLink}
+      exact
+      to={{
+        pathname: `/${styleId}`,
+        product: props.product,
+      }}
+    >
+      <Image src={media.imageUrl} alt={brand + ' - ' + shoe} />
       <Info>
         <Brand>{brand}</Brand>
         <Model>{model}</Model>
       </Info>
       <Meta>
         <Price sale={sale}>
-          ab <span>{price} €</span>
+          ab <span>{retailPrice} €</span>
         </Price>
       </Meta>
     </ListItem>
   )
 }
 
-ProductListing.propTypes = {
+ProductList.propTypes = {
   img: PropTypes.string,
   brand: PropTypes.string,
   model: PropTypes.string,
@@ -40,6 +44,7 @@ const ListItem = styled.li`
   list-style: none;
   border: 1px solid #f0f0f0;
   border-radius: 4px;
+  text-decoration: none;
 `
 
 const Image = styled.img`
