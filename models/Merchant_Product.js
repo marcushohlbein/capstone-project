@@ -28,4 +28,4 @@ const Schema = new mongoose.Schema(
   { timestamps: true, versionKey: false }
 )
 
-module.exports = mongoose.model('Product', schema)
+module.exports = mongoose.model('Merchant_Product', schema)

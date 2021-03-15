@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const Schema = new mongoose.Schema(
+const schema = new mongoose.Schema(
   {
     styleId: {
       type: String,
@@ -24,6 +24,9 @@ const Schema = new mongoose.Schema(
     },
     releaseDate: {
       type: Date,
+    },
+    retailPrice: {
+      type: Number,
     },
     sale: {
       type: Boolean,
