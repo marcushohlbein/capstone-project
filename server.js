@@ -13,6 +13,11 @@ app.get('/api/v1/products', async (req, res, next) => {
   res.json(await Product.find().catch(next))
 })
 
+app.get('/api/v1/products/:id', async (req, res, next) => {
+  const { id } = req.params
+  res.json(await Product.findById(id).catch(next))
+})
+
 app.listen(PORT, () => {
   console.log(`Server listen at http://localhost:${PORT}`)
 })
