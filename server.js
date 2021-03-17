@@ -19,8 +19,8 @@ app.get('/api/v1/products/:id', async (req, res, next) => {
   res.status(200).json(await Product.findById(id).catch(next))
 })
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server listen at http://localhost:${PORT}`)
 })
 
-module.exports = app
+module.exports = server
