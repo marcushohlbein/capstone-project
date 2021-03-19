@@ -1,4 +1,5 @@
 const axios = require('axios')
+const Product = require('../models/Product')
 
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
@@ -13,7 +14,7 @@ const getProducts = async url => {
     .get(url)
     .then(res => {
       const products = res.data.results
-      const cleanProducts = products
+      products
         .filter(product => product.retailPrice !== '' || null || undefined)
         .filter(product => product.styleId !== '' || null || undefined)
         .filter(product => product.media.imageUrl !== null || undefined)
@@ -36,7 +37,7 @@ const getProducts = async url => {
             shops: [],
             media: {
               imageUrl: product.media.imageUrl,
-              thumbsUrl: product.media.thumbUrl,
+              thumbUrl: product.media.thumbUrl,
             },
           }
           createProduct(metadata)
@@ -60,10 +61,9 @@ const getProducts = async url => {
 }
 
 const createProduct = async data => {
-  axios
-    .post('http://localhost:4000/api/v1/products', data)
-    .then(() => console.log('Product created successfully!'))
-    .catch(error => console.log('Create Product failed:', error))
+  Product.create(data)
+    .then(() => console.log('Product created successfully'))
+    .catch(error => console.log(error))
 }
 
 getProducts(shopUrl)
