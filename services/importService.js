@@ -61,7 +61,7 @@ const getProducts = async url => {
 
 const createProduct = async data => {
   axios
-    .post('/api/v1/products', data)
+    .post('http://localhost:4000/api/v1/products', data)
     .then(() => console.log('Product created successfully!'))
     .catch(error => console.log('Create Product failed:', error))
 }

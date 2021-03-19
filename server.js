@@ -44,7 +44,7 @@ app.post('/api/v1/merchants/:sku', async (req, res, next) => {
 })
 
 app.post('/api/v1/products', async (req, res, next) => {
-  res.status(200).json(await Product.insertMany([req.body]).catch(next))
+  res.status(200).json(await Product.insertMany(req.body).catch(next))
 })
 
 const server = app.listen(PORT, () => {
