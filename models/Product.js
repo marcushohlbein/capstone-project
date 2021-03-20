@@ -51,18 +51,16 @@ const schema = new mongoose.Schema(
         },
       },
     ],
-    media: [
-      {
-        imageUrl: {
-          type: String,
-          required: true,
-        },
-        thumbUrl: {
-          type: String,
-          required: true,
-        },
+    media: {
+      imageUrl: {
+        type: String,
+        required: true,
       },
-    ],
+      thumbUrl: {
+        type: String,
+        required: true,
+      },
+    },
   },
   { timestamps: true, versionKey: false }
 )

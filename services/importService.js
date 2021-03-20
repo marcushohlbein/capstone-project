@@ -6,7 +6,7 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const { SNEAKER_DB_URL } = process.env
 
 const shopUrl = SNEAKER_DB_URL
-const pageLimit = 312
+const pageLimit = 313
 let pageCounter = 0
 
 const getProducts = async url => {
