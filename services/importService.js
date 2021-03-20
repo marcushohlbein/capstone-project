@@ -6,7 +6,7 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const { SNEAKER_DB_URL } = process.env
 
 const shopUrl = SNEAKER_DB_URL
-const pageLimit = 1
+const pageLimit = 312
 let pageCounter = 0
 
 const getProducts = async url => {
@@ -55,14 +55,17 @@ const getProducts = async url => {
 
       setTimeout(() => {
         getProducts(nextPageLink)
-      }, randomTimeout(1000, 3000))
+      }, randomTimeout(1000, 5500))
     })
     .catch(error => console.log('Fetching products failed: ', error))
 }
 
 const createProduct = async data => {
-  Product.create(data)
-    .then(() => console.log('Product created successfully'))
+  axios
+    .post('http://localhost:4000/api/v1/products', data)
+    .then(() =>
+      console.log(`${data.model} (${data.styleId}) fetch successfully!`)
+    )
     .catch(error => console.log(error))
 }
 
