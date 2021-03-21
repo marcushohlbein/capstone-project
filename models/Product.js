@@ -32,22 +32,35 @@ const schema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    shops: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Merchant_Product',
-    },
-    media: [
+    shops: [
       {
-        imageUrl: {
+        shopName: {
           type: String,
-          required: true,
         },
-        thumbsUrl: {
+        salesPrice: {
+          type: Number,
+        },
+        regularPrice: {
+          type: Number,
+        },
+        sizes_eu: {
+          type: Object,
+        },
+        productLink: {
           type: String,
-          required: true,
         },
       },
     ],
+    media: {
+      imageUrl: {
+        type: String,
+        required: true,
+      },
+      thumbUrl: {
+        type: String,
+        required: true,
+      },
+    },
   },
   { timestamps: true, versionKey: false }
 )
