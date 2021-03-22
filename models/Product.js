@@ -38,13 +38,13 @@ const schema = new mongoose.Schema(
           type: String,
         },
         salesPrice: {
-          type: Number,
+          type: String,
         },
         regularPrice: {
-          type: Number,
+          type: String,
         },
         sizes_eu: {
-          type: Object,
+          type: Array,
         },
         productLink: {
           type: String,

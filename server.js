@@ -23,17 +23,17 @@ app.get('/api/v1/products/:styleId', async (req, res, next) => {
 
 app.post('/api/v1/merchants/:styleId', async (req, res, next) => {
   const { styleId } = req.params
-  const { shopName, salesPrice, regularPrice, sizes_EU, productLink } = req.body
+  const { shopName, salesPrice, regularPrice, sizes_eu, productLink } = req.body
   res.status(200).json(
     await Product.findOneAndUpdate(
-      { styleId: styleId },
+      { styleId: styleId, 'shops.shopName': { $ne: shopName } },
       {
         $push: {
           shops: {
             shopName: shopName,
             salesPrice: salesPrice,
             regularPrice: regularPrice,
-            sizes_EU: sizes_EU,
+            sizes_eu: sizes_eu,
             productLink: productLink,
           },
         },
@@ -44,7 +44,9 @@ app.post('/api/v1/merchants/:styleId', async (req, res, next) => {
 })
 
 app.post('/api/v1/products', async (req, res, next) => {
-  res.status(200).json(await Product.insertMany(req.body).catch(next))
+  res
+    .status(200)
+    .json(await Product.findOneAndUpdate(req.body, { upset: true }).catch(next))
 })
 
 const server = app.listen(PORT, () => {
