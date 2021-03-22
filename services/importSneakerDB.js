@@ -1,5 +1,4 @@
 const axios = require('axios')
-const Product = require('../models/Product')
 
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
