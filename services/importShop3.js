@@ -16,9 +16,9 @@ const getProductLinks = async url => {
     const response = await axios.get(url)
     const $ = cheerio.load(response.data)
 
-    $('.products-grid > div').map((i, el) => {
+    $('.products-grid > div').map((i, ProdLink) => {
       const link =
-        SHOP3_BASE_URL + $(el).find('.product-image > a').attr('href')
+        SHOP3_BASE_URL + $(ProdLink).find('.product-image > a').attr('href')
 
       const metadata = {
         link: link,
@@ -75,8 +75,8 @@ const getProductData = async url => {
       const size = $(el)
         .find('.swatch > .swatch-element')
         .not('soldout')
-        .each(function (i, element) {
-          const item = $(element).text().trim()
+        .each(function (i, size) {
+          const item = $(size).text().trim()
           sizes_eu.push(item)
         })
 

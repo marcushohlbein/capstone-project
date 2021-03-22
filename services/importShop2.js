@@ -18,8 +18,8 @@ const getProductLinks = async url => {
 
     $('.listing--container > .listing > div')
       .not('.fadeoutnostock')
-      .map((i, el) => {
-        const link = $(el)
+      .map((i, ProdLink) => {
+        const link = $(ProdLink)
           .find('.box--content > .product--info > a')
           .attr('href')
           .slice(0, -6)
@@ -89,8 +89,8 @@ const getProductData = async url => {
       const sizes_eu = []
       const size = $(el)
         .find('.variant--group > .variant--option')
-        .each(function (i, element) {
-          const item = $(element).find('.option--label').text().trim()
+        .each(function (i, size) {
+          const item = $(size).find('.option--label').text().trim()
           sizes_eu.push(item)
         })
 

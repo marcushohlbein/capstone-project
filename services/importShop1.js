@@ -18,8 +18,9 @@ const getProductLinks = async url => {
 
     $('.row > div > .productListing > li')
       .not('.soldout')
-      .map((i, el) => {
-        const link = SHOP1_BASE_URL + $(el).find('.pQuickView > a').attr('href')
+      .map((i, ProdLink) => {
+        const link =
+          SHOP1_BASE_URL + $(ProdLink).find('.pQuickView > a').attr('href')
 
         const metadata = {
           link: link,
@@ -32,13 +33,13 @@ const getProductLinks = async url => {
     pageCounter++
 
     if (pageCounter === pageLimit) {
-      parsedLinks.forEach((item, index) => {
+      parsedLinks.forEach((link, index) => {
         function randomTimeout(min, max) {
           return Math.floor(Math.random() * (max - min) + min)
         }
 
         setTimeout(() => {
-          getProductData(item.link)
+          getProductData(link.link)
         }, randomTimeout(2500, 6000) * index)
       })
       return false
@@ -77,11 +78,11 @@ const getProductData = async url => {
       const sizes_EU = []
       const size = $(el)
         .find('.selectVariants > .customSelectBox > option:not(.disabled) ')
-        .each(function (i, element) {
-          const item = $(element).text().trim().split(' ')
-          item[1] !== 'EUR'
-            ? sizes_EU.push(item[0] + ' ' + item[1])
-            : sizes_EU.push(item[0])
+        .each(function (i, size) {
+          const link = $(size).text().trim().split(' ')
+          link[1] !== 'EUR'
+            ? sizes_EU.push(link[0] + ' ' + link[1])
+            : sizes_EU.push(link[0])
         })
 
       const metadata = {

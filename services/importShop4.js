@@ -16,8 +16,8 @@ const getProductLinks = async url => {
     const response = await axios.get(url)
     const $ = cheerio.load(response.data)
 
-    $('.gridView > .productData').map((i, el) => {
-      const link = $(el).find('a').attr('href')
+    $('.gridView > .productData').map((i, ProdLink) => {
+      const link = $(ProdLink).find('a').attr('href')
 
       const metadata = {
         link: link.slice(0, link.indexOf('?')),
@@ -78,8 +78,8 @@ const getProductData = async url => {
       const sizes_eu = []
       const size = $(el)
         .find('.groessenAuswahl > .groessenImg > .singleSize')
-        .each(function (i, element) {
-          const item = $(element)
+        .each(function (i, size) {
+          const item = $(size)
             .find('a')
             .attr('data-alt')
             .replace('EU ', '')
