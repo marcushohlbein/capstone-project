@@ -1,25 +1,34 @@
-import data from '../data/products.json'
 import styled from 'styled-components/macro'
-import ProductListing from './ProductList/ProductList'
-import ProductDetail from './ProductDetail/ProductDetail'
+import { useQuery } from 'react-query'
 
 import { Switch, Route } from 'react-router-dom'
 
+import ProductListing from './ProductList/ProductList'
+import ProductDetail from './ProductDetail/ProductDetail'
+
+import { getProducts } from '../services/getProducts'
+
 export default function App() {
+  const { data, isError, error, isLoading } = useQuery('products', () =>
+    getProducts()
+  )
+
+  if (isError) {
+    return <p>Error while fetching product: {error}</p>
+  }
+
   return (
     <AppGrid>
+      {isLoading && 'Loading...'}
       <Switch>
         <Route exact path="/">
           <ProductsContainer>
-            {data.map(product => (
-              <ProductListing key={product.id} product={product} />
+            {data?.map(product => (
+              <ProductListing key={product._id} product={product} />
             ))}
           </ProductsContainer>
         </Route>
-        <Route
-          path="/:styleId"
-          render={props => <ProductDetail {...props} />}
-        />
+        <Route path="/:styleId" children={<ProductDetail />} />
       </Switch>
     </AppGrid>
   )
