@@ -61,7 +61,7 @@ ShopListItem.propTypes = {
   shops: PropTypes.array,
 }
 
-const ProductContainer = styled.main`
+const ProductContainer = styled.section`
   display: grid;
   gap: 10px;
 `
