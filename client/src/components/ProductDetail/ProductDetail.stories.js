@@ -1,5 +1,4 @@
 import ProductDetail from './ProductDetail'
-import brooklyn from '../../assets/brooklyn.webp'
 
 export default {
   title: 'ProductDetail',
@@ -24,7 +23,7 @@ Primary.args = {
         {
           price: '79,99€',
           shopName: 'Brooklyn',
-          shopLogo: brooklyn,
+          shopLogo: 'brooklyn',
           shopUrl:
             'https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025',
         },
@@ -32,7 +31,7 @@ Primary.args = {
           price: '69,99€',
           shipping: 'ab 4,90€ Versand',
           shopName: 'Asphaltgold',
-          shopLogo: brooklyn,
+          shopLogo: 'brooklyn',
           shopUrl:
             'https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/',
         },

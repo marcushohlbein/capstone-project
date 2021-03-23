@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useIsFetching, useQuery } from 'react-query'
+import { useQuery } from 'react-query'
 import { useParams } from 'react-router'
 import styled from 'styled-components/macro'
 
