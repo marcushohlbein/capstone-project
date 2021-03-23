@@ -9,6 +9,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
+      staleTime: 3600,
       refetchOnWindowFocus: false,
     },
   },

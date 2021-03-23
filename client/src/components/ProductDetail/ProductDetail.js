@@ -10,20 +10,25 @@ import { NavLink } from 'react-router-dom'
 
 export default function ProductDetail() {
   const { styleId } = useParams()
-  const { data, isFetching, isLoading } = useQuery('product', () =>
-    getProduct(styleId)
+  const { data, isError, error, isLoading } = useQuery(
+    ['product', styleId],
+    () => getProduct(styleId)
   )
   const modelClean = data?.model
     .split(' ')
     .slice(data?.brand.split(' ').length)
     .join(' ')
+
+  if (isError) {
+    return <p>Error while fetching product: {error}</p>
+  }
+
   return (
     <ProductContainer>
       <BackButton as={NavLink} exact to="/">
         zurück
       </BackButton>
       {isLoading && 'Loading...'}
-      {isFetching && 'Background updating...'}
       <ProductInfo>
         <ProductName>
           {data?.brand} {modelClean}
@@ -40,7 +45,7 @@ export default function ProductDetail() {
             price={shop.salePrice ?? shop.regularPrice}
             shipping={shop.shipping}
             shopName={shop.shopName}
-            shopUrl={shop.shopUrl}
+            shopUrl={shop.productLink}
           />
         ))}
       </ShopListContainer>
@@ -57,8 +62,7 @@ ShopListItem.propTypes = {
 }
 
 const ProductContainer = styled.main`
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 10px;
 `
 const BackButton = styled.div`

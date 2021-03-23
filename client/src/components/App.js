@@ -1,4 +1,3 @@
-//import json from '../data/products.json'
 import styled from 'styled-components/macro'
 import { useQuery } from 'react-query'
 
@@ -10,10 +9,17 @@ import ProductDetail from './ProductDetail/ProductDetail'
 import { getProducts } from '../services/getProducts'
 
 export default function App() {
-  const { status, data } = useQuery('products', () => getProducts())
+  const { data, isError, error, isLoading } = useQuery('products', () =>
+    getProducts()
+  )
+
+  if (isError) {
+    return <p>Error while fetching product: {error}</p>
+  }
+
   return (
     <AppGrid>
-      {status === 'loading' && 'Loading...'}
+      {isLoading && 'Loading...'}
       <Switch>
         <Route exact path="/">
           <ProductsContainer>
