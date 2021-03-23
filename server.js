@@ -9,6 +9,7 @@ const app = express()
 
 setupDB()
 app.use('/', express.json())
+app.use(require('./routes/error'))
 
 app.get('/api/v1/products', async (req, res, next) => {
   res
