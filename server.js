@@ -12,9 +12,11 @@ app.use('/', express.json())
 app.use(require('./routes/error'))
 
 app.get('/api/v1/products', async (req, res, next) => {
-  res
-    .status(200)
-    .json(await Product.find({ 'shops.0': { $exists: true } }).catch(next))
+  res.status(200).json(
+    await Product.find({ 'shops.0': { $exists: true } })
+      .limit(20)
+      .catch(next)
+  )
 })
 
 app.get('/api/v1/products/:styleId', async (req, res, next) => {

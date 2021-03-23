@@ -1,36 +1,28 @@
 //import json from '../data/products.json'
-import { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
-import ProductListing from './ProductList/ProductList'
-import ProductDetail from './ProductDetail/ProductDetail'
+import { useQuery } from 'react-query'
 
 import { Switch, Route } from 'react-router-dom'
 
-//import { useQuery } from 'react-query'
-//import axios from 'axios'
-import getProducts from '../services/getProducts'
+import ProductListing from './ProductList/ProductList'
+import ProductDetail from './ProductDetail/ProductDetail'
+
+import { getProducts } from '../services/getProducts'
 
 export default function App() {
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    getProducts().then(data => setProducts([...data]))
-  }, [])
-
+  const { status, data } = useQuery('products', () => getProducts())
   return (
     <AppGrid>
+      {status === 'loading' && 'Loading...'}
       <Switch>
         <Route exact path="/">
           <ProductsContainer>
-            {products.map(product => (
+            {data?.map(product => (
               <ProductListing key={product._id} product={product} />
             ))}
           </ProductsContainer>
         </Route>
-        <Route
-          path="/:styleId"
-          render={props => <ProductDetail {...props} />}
-        />
+        <Route path="/:styleId" children={<ProductDetail />} />
       </Switch>
     </AppGrid>
   )

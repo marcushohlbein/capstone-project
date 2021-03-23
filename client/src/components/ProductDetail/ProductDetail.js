@@ -1,25 +1,43 @@
 import React from 'react'
-import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
+import { useIsFetching, useQuery } from 'react-query'
+import { useParams } from 'react-router'
+import styled from 'styled-components/macro'
 
 import ShopListItem from '../ShopListItem/ShopListItem'
+import { getProduct } from '../../services/getProduct'
+import { NavLink } from 'react-router-dom'
 
-export default function ProductDetail({ location }) {
-  const { brand, shoe, styleId, media, shops } = location.product
-  const model = shoe.split(' ').slice(brand.split(' ').length).join(' ')
+export default function ProductDetail() {
+  const { styleId } = useParams()
+  const { data, isFetching, isLoading } = useQuery('product', () =>
+    getProduct(styleId)
+  )
+  const modelClean = data?.model
+    .split(' ')
+    .slice(data?.brand.split(' ').length)
+    .join(' ')
   return (
     <ProductContainer>
+      <BackButton as={NavLink} exact to="/">
+        zurück
+      </BackButton>
+      {isLoading && 'Loading...'}
+      {isFetching && 'Background updating...'}
       <ProductInfo>
         <ProductName>
-          {brand} {model}
+          {data?.brand} {modelClean}
         </ProductName>
         <ProductNumber>{styleId}</ProductNumber>
       </ProductInfo>
-      <ProductImage src={media.imageUrl} alt={brand + ' ' + model} />
+      <ProductImage
+        src={data?.media.imageUrl}
+        alt={data?.brand + ' ' + data?.model}
+      />
       <ShopListContainer>
-        {shops.map((shop, i) => (
+        {data?.shops.map((shop, i) => (
           <ShopListItem
-            price={shop.price}
+            price={shop.salePrice ?? shop.regularPrice}
             shipping={shop.shipping}
             shopName={shop.shopName}
             shopUrl={shop.shopUrl}
@@ -32,15 +50,24 @@ export default function ProductDetail({ location }) {
 
 ShopListItem.propTypes = {
   brand: PropTypes.string,
-  shoe: PropTypes.string,
+  model: PropTypes.string,
   styleId: PropTypes.string,
   media: PropTypes.array,
   shops: PropTypes.array,
 }
 
 const ProductContainer = styled.main`
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
+const BackButton = styled.div`
+  text-decoration: none;
+  color: var(--color-grey);
+  font-style: italic;
+  &:before {
+    content: '< ';
+  }
 `
 
 const ProductInfo = styled.div`
