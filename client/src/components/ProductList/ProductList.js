@@ -4,7 +4,30 @@ import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 
 export default function ProductList(props) {
-  const { styleId, media, brand, model, retailPrice, sale } = props.product
+  const { styleId, media, brand, model, shops, sale } = props.product
+
+  function shopCount(count) {
+    if (count > 1) {
+      return count + ' Shops'
+    } else {
+      return count + ' Shop'
+    }
+  }
+
+  function minPrice(shops) {
+    const regularPrice = shops
+      .map(product => product.regularPrice)
+      .sort((a, b) => a > b)
+    const salesPrice = shops
+      .map(product => product.salesPrice)
+      .sort((a, b) => a > b)
+    if (salesPrice[0] !== '' && regularPrice[0] > salesPrice[0]) {
+      return salesPrice[0]
+    } else {
+      return regularPrice[0]
+    }
+  }
+
   return (
     <ListItem
       as={NavLink}
@@ -19,8 +42,9 @@ export default function ProductList(props) {
         <Model>{model}</Model>
       </Info>
       <Meta>
+        <Shop>{shopCount(shops.length)}</Shop>
         <Price sale={sale}>
-          ab <span>{retailPrice} €</span>
+          ab <span>{minPrice(shops)} €</span>
         </Price>
       </Meta>
     </ListItem>
@@ -28,10 +52,11 @@ export default function ProductList(props) {
 }
 
 ProductList.propTypes = {
-  img: PropTypes.string,
+  styleId: PropTypes.string,
+  media: PropTypes.object,
   brand: PropTypes.string,
   model: PropTypes.string,
-  price: PropTypes.string,
+  shops: PropTypes.array,
   sale: PropTypes.bool,
 }
 
@@ -74,17 +99,22 @@ const Model = styled.h3`
 
 const Meta = styled.div`
   display: flex;
+  justify-content: space-between;
   background: var(--color-lightgrey);
-  align-items: center;
-  justify-content: flex-end;
-  padding: 4px 10px;
+  align-items: baseline;
+  padding: 6px 10px;
+`
+
+const Shop = styled.div`
+  font-size: 0.8em;
+  font-weight: 700;
 `
 
 const Price = styled.div`
-  font-size: 0.8em;
+  font-size: 0.7em;
   span {
     color: ${props => (props.sale ? '#E74C3C' : '#6F7172')};
     font-weight: 700;
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 `
