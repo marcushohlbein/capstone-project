@@ -4,6 +4,7 @@ import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 
 export default function ProductList(props) {
+<<<<<<< HEAD
   const { styleId, media, brand, model, shops, sale } = props.product
 
   function shopCount(count) {
@@ -28,6 +29,10 @@ export default function ProductList(props) {
     }
   }
 
+=======
+  const { styleId, media, brand, model, retailPrice, sale } = props.product
+  const modelName = model.split(' ').slice(brand.split(' ').length).join(' ')
+>>>>>>> main
   return (
     <ListItem
       as={NavLink}
@@ -39,7 +44,7 @@ export default function ProductList(props) {
       <Image src={media.imageUrl} alt={brand + ' - ' + model} />
       <Info>
         <Brand>{brand}</Brand>
-        <Model>{model}</Model>
+        <Model>{modelName}</Model>
       </Info>
       <Meta>
         <Shop>{shopCount(shops.length)}</Shop>
