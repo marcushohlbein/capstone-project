@@ -11,7 +11,6 @@ export default function Header() {
 }
 
 const HeaderWrapper = styled.header`
-  position: fixed;
   display: flex;
   align-items: center;
   height: 56px;
