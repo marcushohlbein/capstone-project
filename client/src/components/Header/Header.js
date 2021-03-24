@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import logo from '../../assets/sneaker24-logo.png'
 
-export default function Header({ text }) {
+export default function Header() {
   return (
     <HeaderWrapper>
       <Logo src={logo} alt="sneaker24-logo" width="125" height="25" />
