@@ -16,12 +16,9 @@ export default function ProductList(props) {
     const salesPrice = shops
       .map(product => product.salesPrice)
       .sort((a, b) => a > b)
-    if (salesPrice[0] !== '' && regularPrice[0] > salesPrice[0]) {
-      return salesPrice[0]
-    } else {
-      return regularPrice[0]
+    if (salesPrice[0] !== '' && regularPrice[0] > salesPrice[0]) return salesPrice[0]
+    return regularPrice[0]
     }
-  }
 
 =======
   const { styleId, media, brand, model, retailPrice, sale } = props.product
