@@ -4,10 +4,10 @@ import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 
 export default function ProductList(props) {
-<<<<<<< HEAD
   const { styleId, media, brand, model, shops, sale } = props.product
+  const modelName = model.split(' ').slice(brand.split(' ').length).join(' ')
 
-  const shopCount = count => count > 1 ? count + ' Shops' : count + ' Shop'
+  const shopCount = count => (count > 1 ? count + ' Shops' : count + ' Shop')
 
   function minPrice(shops) {
     const regularPrice = shops
@@ -16,14 +16,11 @@ export default function ProductList(props) {
     const salesPrice = shops
       .map(product => product.salesPrice)
       .sort((a, b) => a > b)
-    if (salesPrice[0] !== '' && regularPrice[0] > salesPrice[0]) return salesPrice[0]
+    if (salesPrice[0] !== '' && regularPrice[0] > salesPrice[0])
+      return salesPrice[0]
     return regularPrice[0]
-    }
+  }
 
-=======
-  const { styleId, media, brand, model, retailPrice, sale } = props.product
-  const modelName = model.split(' ').slice(brand.split(' ').length).join(' ')
->>>>>>> main
   return (
     <ListItem
       as={NavLink}
