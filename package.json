@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel server client",
+    "start": "node server.js",
+    "build": "cd client && npm run build",
+    "dev": "npm-run-all --parallel server client",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
     "test": "jest --forceExit --detectOpenHandles",

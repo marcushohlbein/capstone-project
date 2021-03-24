@@ -40,19 +40,28 @@ export default function App() {
 
 const AppGrid = styled.div`
   display: grid;
-  grid-template-rows: 61px auto;
-  gap: 10px;
-  width: 100%;
-  max-width: 375px;
+  grid-template-rows: 56px auto;
+  height: 100vh;
+  max-width: 1200px;
+  min-width: 375px;
   margin: 0 auto;
 `
 
 const ContentContainer = styled.main`
-  padding: 66px 10px;
+  padding: 10px;
+  overflow: scroll;
 `
 const ProductsContainer = styled.ul`
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+
+  @media (min-width: 576px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 `
