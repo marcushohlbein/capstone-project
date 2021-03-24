@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function ProductList(props) {
   const { styleId, media, brand, model, retailPrice, sale } = props.product
+  const modelName = model.split(' ').slice(brand.split(' ').length).join(' ')
   return (
     <ListItem
       as={NavLink}
@@ -16,7 +17,7 @@ export default function ProductList(props) {
       <Image src={media.imageUrl} alt={brand + ' - ' + model} />
       <Info>
         <Brand>{brand}</Brand>
-        <Model>{model}</Model>
+        <Model>{modelName}</Model>
       </Info>
       <Meta>
         <Price sale={sale}>

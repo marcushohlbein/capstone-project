@@ -7,6 +7,7 @@ import ProductListing from './ProductList/ProductList'
 import ProductDetail from './ProductDetail/ProductDetail'
 
 import { getProducts } from '../services/getProducts'
+import Header from './Header/Header'
 
 export default function App() {
   const { data, isError, error, isLoading } = useQuery('products', () =>
@@ -19,29 +20,36 @@ export default function App() {
 
   return (
     <AppGrid>
-      {isLoading && 'Loading...'}
-      <Switch>
-        <Route exact path="/">
-          <ProductsContainer>
-            {data?.map(product => (
-              <ProductListing key={product._id} product={product} />
-            ))}
-          </ProductsContainer>
-        </Route>
-        <Route path="/:styleId" children={<ProductDetail />} />
-      </Switch>
+      <Header />
+      <ContentContainer>
+        {isLoading && 'Loading...'}
+        <Switch>
+          <Route exact path="/">
+            <ProductsContainer>
+              {data?.map(product => (
+                <ProductListing key={product._id} product={product} />
+              ))}
+            </ProductsContainer>
+          </Route>
+          <Route path="/:styleId" children={<ProductDetail />} />
+        </Switch>
+      </ContentContainer>
     </AppGrid>
   )
 }
 
-const AppGrid = styled.main`
+const AppGrid = styled.div`
   display: grid;
+  grid-template-rows: 61px auto;
+  gap: 10px;
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
-  padding: 10px;
 `
 
+const ContentContainer = styled.main`
+  padding: 66px 10px;
+`
 const ProductsContainer = styled.ul`
   padding: 0;
   display: grid;
