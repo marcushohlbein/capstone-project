@@ -8,27 +8,41 @@
     "releaseDate": "2020-09-25",
     "retailPrice": 105,
     "sale": true,
-    "shoe": "Vans Era",
+    "model": "Vans Era",
     "styleId": "VN0A4BVA20P1",
     "title": "Vans Era WTAPS Bones Black",
     "year": 2020,
     "shops": [
       {
-        "price": "79,99€",
-        "shopName": "Brooklyn",
-        "shopUrl": "https://www.43einhalb.com/p/nike-challenger-og-gruen-schwarz-504025"
+        "sizes_eu": [
+          "36 2/3",
+          "37 1/3",
+          "38 2/3",
+          "38.0",
+          "39 1/3",
+          "40 2/3",
+          "40.0",
+          "41 1/3",
+          "42 2/3",
+          "42.0",
+          "43 1/3",
+          "44 2/3",
+          "44.0",
+          "45 1/3",
+          "46.0"
+        ],
+        "shopName": "brooklyn",
+        "salesPrice": "",
+        "regularPrice": "180,00",
+        "productLink": "https://brooklyn-shop.de/collections/schuhe/products/adidas-adidas-ultraboost-21-fy0379-weiss-weiss"
       },
       {
-        "price": "69,99€",
-        "shipping": "ab 4,90€ Versand",
-        "shopName": "Asphaltgold",
-        "shopUrl": "https://www.asphaltgold.com/de/product/nike-air-max-90-og-iii-prm-white-white-black-bright-crimson/"
-      },
-      {
-        "price": "74,99€",
-        "shipping": "ab 5,90€ Versand",
-        "shopName": "Def-Shop",
-        "shopUrl": "https://www.def-shop.com/adidas-originals-3mc-sneakers-core-black-core-black-ftwr-white.html"
+        "sizes_eu": ["42 2/3", "44", "45 1/3"],
+
+        "shopName": "sneakertwins",
+        "salesPrice": "",
+        "regularPrice": "179,95",
+        "productLink": "https://www.sneakertwins.de/adidas-ultraboost-21-herren-laufschuh-weiss-232912.html"
       }
     ],
     "media": {
