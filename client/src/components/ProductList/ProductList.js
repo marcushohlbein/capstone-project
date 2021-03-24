@@ -7,13 +7,7 @@ export default function ProductList(props) {
 <<<<<<< HEAD
   const { styleId, media, brand, model, shops, sale } = props.product
 
-  function shopCount(count) {
-    if (count > 1) {
-      return count + ' Shops'
-    } else {
-      return count + ' Shop'
-    }
-  }
+  const shopCount = count => count > 1 ? count + ' Shops' : count + ' Shop'
 
   function minPrice(shops) {
     const regularPrice = shops
