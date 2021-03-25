@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import Button from '../Button/Button'
 import PropTypes from 'prop-types'
-import formatedSize from '../../lib/formatedSize'
+import formattedSize from '../../lib/formattedSize'
 
 export default function ShopListItem({
   price,
   shopName,
   sizes_eu,
-  productLink,
+  productMerchantLink,
 }) {
   const imgUrl = './assets/' + shopName + '.svg'
   return (
@@ -21,12 +21,18 @@ export default function ShopListItem({
       </ShopInfo>
       <SizeContainer>
         {sizes_eu.map(size_eu => (
-          <SizeItem title="zum Shop" onClick={() => gotoLink(productLink)}>
-            {formatedSize(size_eu)}
+          <SizeItem
+            title="zum Shop"
+            onClick={() => gotoLink(productMerchantLink)}
+          >
+            {formattedSize(size_eu)}
           </SizeItem>
         ))}
       </SizeContainer>
-      <Button text="Zum Shop" onHandleClick={() => gotoLink(productLink)} />
+      <Button
+        text="Zum Shop"
+        onHandleClick={() => gotoLink(productMerchantLink)}
+      />
     </ListContainer>
   )
 }

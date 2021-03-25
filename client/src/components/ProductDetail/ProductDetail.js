@@ -45,7 +45,7 @@ export default function ProductDetail() {
             price={shop.salePrice ?? shop.regularPrice}
             sizes_eu={shop.sizes_eu}
             shopName={shop.shopName}
-            productLink={shop.productLink}
+            productMerchantLink={shop.productLink}
           />
         ))}
       </ShopListContainer>
