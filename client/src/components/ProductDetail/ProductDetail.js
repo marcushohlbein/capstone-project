@@ -43,9 +43,9 @@ export default function ProductDetail() {
         {data?.shops.map((shop, i) => (
           <ShopListItem
             price={shop.salePrice ?? shop.regularPrice}
-            shipping={shop.shipping}
+            sizes_eu={shop.sizes_eu}
             shopName={shop.shopName}
-            shopUrl={shop.productLink}
+            productMerchantLink={shop.productLink}
           />
         ))}
       </ShopListContainer>
@@ -64,6 +64,7 @@ ShopListItem.propTypes = {
 const ProductContainer = styled.section`
   display: grid;
   gap: 10px;
+  margin-bottom: 20px;
 `
 const BackButton = styled.div`
   text-decoration: none;

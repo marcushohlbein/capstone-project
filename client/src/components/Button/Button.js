@@ -15,6 +15,7 @@ Button.propTypes = {
 
 const ButtonElement = styled.button`
   border: none;
+  border-radius: 25px;
   background-color: var(--color-red);
   padding: 10px;
   color: white;
