@@ -64,17 +64,17 @@ const ListItem = styled.li`
 `
 
 const Image = styled.img`
-  padding: 10px;
+  padding: 8px;
   max-width: 100%;
 `
 
 const Info = styled.div`
-  padding: 5px 10px;
+  padding: 5px 8px;
   overflow: hidden;
 `
 
 const Brand = styled.div`
-  font-size: 0.8em;
+  font-size: 0.7em;
   line-height: 1;
   margin-top: 10px;
 `
@@ -83,7 +83,7 @@ const Model = styled.h3`
   margin: 0;
   color: var(--color-darkgrey);
   font-weight: 700;
-  font-size: 1em;
+  font-size: 0.9em;
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -95,7 +95,7 @@ const Meta = styled.div`
   justify-content: space-between;
   background: var(--color-lightgrey);
   align-items: baseline;
-  padding: 6px 10px;
+  padding: 8px 8px;
 `
 
 const Shop = styled.div`
@@ -108,6 +108,6 @@ const Price = styled.div`
   span {
     color: ${props => (props.sale ? '#E74C3C' : '#6F7172')};
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 `
