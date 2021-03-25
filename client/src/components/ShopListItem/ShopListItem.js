@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import Button from '../Button/Button'
 import PropTypes from 'prop-types'
+import formatedSize from '../../lib/formatedSize'
 
 export default function ShopListItem({
   price,
@@ -21,7 +22,7 @@ export default function ShopListItem({
       <SizeContainer>
         {sizes_eu.map(size_eu => (
           <SizeItem title="zum Shop" onClick={() => gotoLink(productLink)}>
-            {size_eu}
+            {formatedSize(size_eu)}
           </SizeItem>
         ))}
       </SizeContainer>
