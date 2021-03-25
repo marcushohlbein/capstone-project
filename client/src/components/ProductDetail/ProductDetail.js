@@ -43,9 +43,9 @@ export default function ProductDetail() {
         {data?.shops.map((shop, i) => (
           <ShopListItem
             price={shop.salePrice ?? shop.regularPrice}
-            shipping={shop.shipping}
+            sizes_eu={shop.sizes_eu}
             shopName={shop.shopName}
-            shopUrl={shop.productLink}
+            productLink={shop.productLink}
           />
         ))}
       </ShopListContainer>
