@@ -5,7 +5,9 @@ import { NavLink } from 'react-router-dom'
 
 export default function ProductList(props) {
   const { styleId, media, brand, model, shops, sale } = props.product
-  const modelName = model.split(' ').slice(brand.split(' ').length).join(' ')
+  const modelName = model.includes(brand)
+    ? model.split(' ').slice(brand.split(' ').length).join(' ')
+    : model
 
   const shopCount = count => (count > 1 ? count + ' Shops' : count + ' Shop')
 
