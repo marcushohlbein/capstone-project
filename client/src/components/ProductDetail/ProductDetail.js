@@ -64,6 +64,7 @@ ShopListItem.propTypes = {
 const ProductContainer = styled.section`
   display: grid;
   gap: 10px;
+  margin-bottom: 20px;
 `
 const BackButton = styled.div`
   text-decoration: none;

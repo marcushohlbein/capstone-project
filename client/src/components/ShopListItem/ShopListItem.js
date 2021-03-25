@@ -93,10 +93,10 @@ const SizeItem = styled.li`
   text-align: center;
   color: var(--color-darkgrey);
   font-weight: 600;
-  font-size: 0.9em;
+  font-size: 0.8em;
   border: 1px solid var(--color-grey);
-  margin: 0 5px 5px 0;
+  margin: 0 7px 5px 0;
   padding: 3px;
-  width: 40px;
+  width: 42px;
   cursor: pointer;
 `
