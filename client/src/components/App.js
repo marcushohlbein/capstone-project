@@ -8,6 +8,9 @@ import ProductDetail from './ProductDetail/ProductDetail'
 
 import { getProducts } from '../services/getProducts'
 import Header from './Header/Header'
+import SizeFilter from './SizeFilter/SizeFilter'
+
+const queryString = require('query-string')
 
 export default function App() {
   const { data, isError, error, isLoading } = useQuery('products', () =>
@@ -18,9 +21,13 @@ export default function App() {
     return <p>Error while fetching product: {error}</p>
   }
 
+  const parsed = queryString.parse(window.location.search)
+  console.log(parsed)
+
   return (
     <AppGrid>
       <Header />
+      <SizeFilter />
       <ContentContainer>
         {isLoading && 'Loading...'}
         <Switch>
