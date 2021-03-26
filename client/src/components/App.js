@@ -8,6 +8,7 @@ import ProductDetail from './ProductDetail/ProductDetail'
 
 import { getProducts } from '../services/getProducts'
 import Header from './Header/Header'
+import SearchBar from './SearchBar/SearchBar'
 
 export default function App() {
   const { data, isError, error, isLoading } = useQuery('products', () =>
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <AppGrid>
       <Header />
+      <SearchBar />
       <ContentContainer>
         {isLoading && 'Loading...'}
         <Switch>
