@@ -43,8 +43,21 @@ const AppGrid = styled.div`
   grid-template-rows: 56px auto;
   height: 100vh;
   max-width: 1200px;
-  min-width: 375px;
   margin: 0 auto;
+
+  &:last-child {
+    position: relative;
+  }
+
+  &::last-child:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+  }
 `
 
 const ContentContainer = styled.main`
