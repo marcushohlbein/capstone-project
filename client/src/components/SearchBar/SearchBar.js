@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import { useHistory } from 'react-router-dom'
 
 export default function SearchBar() {
-  const history = useHistory()
+  const { push } = useHistory()
   return (
     <SearchBarForm onSubmit={handleSubmit}>
       <SearchInput
@@ -15,10 +15,11 @@ export default function SearchBar() {
 }
 
 function handleSubmit(event) {
-  //event.preventDefault()
+  event.preventDefault()
   const form = event.target
   const { search } = form.elements
-  history.push(`sneaker/?q=${search}`)
+  push(`sneaker/?q=${search.value}`)
+  console.log(search.value)
 }
 
 const SearchBarForm = styled.form``
