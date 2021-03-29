@@ -30,11 +30,7 @@
       "react-app/jest"
     ],
     "rules": {
-      "import/no-anonymous-default-export": "off",
-      "quote-props": [
-        "error",
-        "consistent-as-needed"
-      ]
+      "import/no-anonymous-default-export": "off"
     }
   },
   "browserslist": {
