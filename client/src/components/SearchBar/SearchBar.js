@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import { useHistory } from 'react-router-dom'
 
 export default function SearchBar() {
-  const push = useHistory()
+  const { push } = useHistory()
   return (
     <SearchBarForm onSubmit={handleSubmit}>
       <SearchInput

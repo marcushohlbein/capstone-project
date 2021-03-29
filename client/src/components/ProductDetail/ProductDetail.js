@@ -43,7 +43,7 @@ export default function ProductDetail() {
         {data?.shops.map((shop, i) => (
           <ShopListItem
             key={shop._id}
-            price={shop.salePrice ?? shop.regularPrice}
+            price={shop.salesPrice || shop.regularPrice}
             sizes_eu={shop.sizes_eu}
             shopName={shop.shopName}
             productMerchantLink={shop.productLink}
