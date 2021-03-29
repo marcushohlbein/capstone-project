@@ -1,20 +1,24 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { useHistory } from 'react-router-dom'
 
 export default function SearchBar() {
+  const push = useHistory()
   return (
     <SearchBarForm onSubmit={handleSubmit}>
-      <SearchInput name="q" placeholder="z.B. Modell oder Marke"></SearchInput>
+      <SearchInput
+        name="q"
+        required
+        placeholder="z.B. Modell oder Marke"
+      ></SearchInput>
     </SearchBarForm>
   )
-}
 
-function handleSubmit(event) {
-  //event.preventDefault()
-  const form = event.target
-  const { q } = form.elements
-  //push(`/sneaker/?q=${search.value}`)
-  console.log(q.value)
+  function handleSubmit(event) {
+    const form = event.target
+    const { q } = form.elements
+    q.value === '' ? push(`/?q=${q.value}`) : push('/')
+  }
 }
 
 const SearchBarForm = styled.form`

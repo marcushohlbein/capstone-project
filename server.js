@@ -13,15 +13,9 @@ app.use('/', express.json())
 app.use(express.static('./client/build'))
 app.use(require('./routes/error'))
 
-app.get('/api/v1/products', async (req, res, next) => {
-  const dbQuery = getDbQuery(req.query.q)
-
-  res.status(200).json(
-    await Product.find(dbQuery)
-      //await Product.find({ 'shops.0': { $exists: true } })
-      .limit(20)
-      .catch(next)
-  )
+app.get('/api/v1/products/', async (req, res, next) => {
+  const dbQuery = getDbQuery(req.query)
+  res.status(200).json(await Product.find(dbQuery).limit(20).catch(next))
 })
 
 app.get('/api/v1/products/:styleId', async (req, res, next) => {

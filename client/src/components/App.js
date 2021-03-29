@@ -12,9 +12,9 @@ import SearchBar from './SearchBar/SearchBar'
 export default function App() {
   const { data, isError, error, isLoading } = useQuery('products', () => {
     if (window.location.search.length === 0) {
-      getProducts()
+      return getProducts()
     } else {
-      getProducts(window.location.search)
+      return getProducts(window.location.search)
     }
   })
 
