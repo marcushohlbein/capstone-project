@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro'
 import { useQuery } from 'react-query'
-
 import { Switch, Route } from 'react-router-dom'
 
 import ProductListing from './ProductList/ProductList'
@@ -11,9 +10,13 @@ import Header from './Header/Header'
 import SearchBar from './SearchBar/SearchBar'
 
 export default function App() {
-  const { data, isError, error, isLoading } = useQuery('products', () =>
-    getProducts()
-  )
+  const { data, isError, error, isLoading } = useQuery('products', () => {
+    if (window.location.search.length === 0) {
+      getProducts()
+    } else {
+      getProducts(window.location.search)
+    }
+  })
 
   if (isError) {
     return <p>Error while fetching product: {error}</p>
@@ -42,7 +45,7 @@ export default function App() {
 
 const AppGrid = styled.div`
   display: grid;
-  grid-template-rows: 56px auto;
+  grid-template-rows: 56px 48px auto;
   height: 100vh;
   max-width: 1200px;
   min-width: 375px;
@@ -55,6 +58,7 @@ const ContentContainer = styled.main`
 `
 const ProductsContainer = styled.ul`
   padding: 0;
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;

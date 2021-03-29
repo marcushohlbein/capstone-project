@@ -42,6 +42,7 @@ export default function ProductDetail() {
       <ShopListContainer>
         {data?.shops.map((shop, i) => (
           <ShopListItem
+            key={shop._id}
             price={shop.salePrice ?? shop.regularPrice}
             sizes_eu={shop.sizes_eu}
             shopName={shop.shopName}

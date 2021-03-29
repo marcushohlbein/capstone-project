@@ -1,6 +1,7 @@
 const express = require('express')
 const setupDB = require('./setupDB')
 const Product = require('./models/Product')
+const getDbQuery = require('./lib/getDbQuery')
 
 require('dotenv').config()
 const { PORT = 4000 } = process.env
@@ -13,8 +14,11 @@ app.use(express.static('./client/build'))
 app.use(require('./routes/error'))
 
 app.get('/api/v1/products', async (req, res, next) => {
+  const dbQuery = getDbQuery(req.query.q)
+
   res.status(200).json(
-    await Product.find({ 'shops.0': { $exists: true } })
+    await Product.find(dbQuery)
+      //await Product.find({ 'shops.0': { $exists: true } })
       .limit(20)
       .catch(next)
   )
