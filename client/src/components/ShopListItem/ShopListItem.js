@@ -20,8 +20,9 @@ export default function ShopListItem({
         </PriceInfo>
       </ShopInfo>
       <SizeContainer>
-        {sizes_eu.map(size_eu => (
+        {sizes_eu.map((size_eu, i) => (
           <SizeItem
+            key={i}
             title="zum Shop"
             onClick={() => gotoLink(productMerchantLink)}
           >
