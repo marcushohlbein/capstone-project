@@ -25,20 +25,22 @@ export default function ProductDetail() {
 
   return (
     <ProductContainer>
-      <BackButton as={NavLink} exact to="/">
-        zurück
-      </BackButton>
-      {isLoading && 'Loading...'}
-      <ProductInfo>
-        <ProductName>
-          {data?.brand} {modelClean}
-        </ProductName>
-        <ProductNumber>{styleId}</ProductNumber>
-      </ProductInfo>
-      <ProductImage
-        src={data?.media.imageUrl}
-        alt={data?.brand + ' ' + data?.model}
-      />
+      <ProductContent>
+        <BackButton as={NavLink} exact to="/">
+          zurück
+        </BackButton>
+        {isLoading && 'Loading...'}
+        <ProductInfo>
+          <ProductName>
+            {data?.brand} {modelClean}
+          </ProductName>
+          <ProductNumber>{styleId}</ProductNumber>
+        </ProductInfo>
+        <ProductImage
+          src={data?.media.imageUrl}
+          alt={data?.brand + ' ' + data?.model}
+        />
+      </ProductContent>
       <ShopListContainer>
         {data?.shops.map((shop, i) => (
           <ShopListItem
@@ -66,7 +68,14 @@ const ProductContainer = styled.section`
   display: grid;
   gap: 10px;
   margin-bottom: 20px;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
+
+const ProductContent = styled.div``
+
 const BackButton = styled.div`
   text-decoration: none;
   color: var(--color-grey);

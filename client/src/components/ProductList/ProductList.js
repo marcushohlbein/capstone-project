@@ -15,12 +15,10 @@ export default function ProductList(props) {
     const regularPrice = shops
       .map(product => product.regularPrice)
       .sort((a, b) => a < b)
-    console.log(regularPrice)
     const salesPrice = shops
       .map(product => product.salesPrice)
       .sort((a, b) => a > b)
       .filter(Boolean)
-    console.log(salesPrice)
     if (salesPrice[0] !== '' && regularPrice[0] > salesPrice[0])
       return salesPrice[0]
     return regularPrice[0]
@@ -69,7 +67,7 @@ const ListItem = styled.li`
 `
 
 const Image = styled.img`
-  padding: 8px;
+  padding: 18px;
   max-width: 100%;
 `
 

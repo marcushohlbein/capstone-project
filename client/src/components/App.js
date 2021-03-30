@@ -55,6 +55,12 @@ const AppGrid = styled.div`
 const ContentContainer = styled.main`
   padding: 10px;
   overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+
+  &:-webkit-scrollbar {
+    display: none;
+  }
 `
 const ProductsContainer = styled.ul`
   padding: 0;

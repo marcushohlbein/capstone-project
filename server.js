@@ -15,7 +15,7 @@ app.use(require('./routes/error'))
 
 app.get('/api/v1/products/', async (req, res, next) => {
   const dbQuery = getDbQuery(req.query)
-  res.status(200).json(await Product.find(dbQuery).limit(20).catch(next))
+  res.status(200).json(await Product.find(dbQuery).limit(48).catch(next))
 })
 
 app.get('/api/v1/products/:styleId', async (req, res, next) => {
