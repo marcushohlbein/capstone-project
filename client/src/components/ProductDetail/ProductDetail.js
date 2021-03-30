@@ -25,24 +25,27 @@ export default function ProductDetail() {
 
   return (
     <ProductContainer>
-      <BackButton as={NavLink} exact to="/">
-        zurück
-      </BackButton>
-      {isLoading && 'Loading...'}
-      <ProductInfo>
-        <ProductName>
-          {data?.brand} {modelClean}
-        </ProductName>
-        <ProductNumber>{styleId}</ProductNumber>
-      </ProductInfo>
-      <ProductImage
-        src={data?.media.imageUrl}
-        alt={data?.brand + ' ' + data?.model}
-      />
+      <div>
+        <BackButton exact to="..">
+          zurück
+        </BackButton>
+        {isLoading && 'Loading...'}
+        <ProductInfo>
+          <ProductName>
+            {data?.brand} {modelClean}
+          </ProductName>
+          <ProductNumber>{styleId}</ProductNumber>
+        </ProductInfo>
+        <ProductImage
+          src={data?.media.imageUrl}
+          alt={data?.brand + ' ' + data?.model}
+        />
+      </div>
       <ShopListContainer>
         {data?.shops.map((shop, i) => (
           <ShopListItem
-            price={shop.salePrice ?? shop.regularPrice}
+            key={shop._id}
+            price={shop.salesPrice || shop.regularPrice}
             sizes_eu={shop.sizes_eu}
             shopName={shop.shopName}
             productMerchantLink={shop.productLink}
@@ -65,8 +68,13 @@ const ProductContainer = styled.section`
   display: grid;
   gap: 10px;
   margin-bottom: 20px;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
-const BackButton = styled.div`
+
+const BackButton = styled(NavLink)`
   text-decoration: none;
   color: var(--color-grey);
   font-style: italic;
