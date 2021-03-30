@@ -16,8 +16,8 @@ export default function SearchBar() {
 
   function handleSubmit(event) {
     const form = event.target
-    const { q } = form.elements
-    push(`/?q=${q.value}`)
+    const { q: query } = form.elements
+    push(`/?q=${query.value}`)
   }
 }
 

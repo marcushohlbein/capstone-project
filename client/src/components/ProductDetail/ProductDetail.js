@@ -25,8 +25,8 @@ export default function ProductDetail() {
 
   return (
     <ProductContainer>
-      <ProductContent>
-        <BackButton as={NavLink} exact to="/">
+      <div>
+        <BackButton exact to="..">
           zurück
         </BackButton>
         {isLoading && 'Loading...'}
@@ -40,7 +40,7 @@ export default function ProductDetail() {
           src={data?.media.imageUrl}
           alt={data?.brand + ' ' + data?.model}
         />
-      </ProductContent>
+      </div>
       <ShopListContainer>
         {data?.shops.map((shop, i) => (
           <ShopListItem
@@ -74,9 +74,7 @@ const ProductContainer = styled.section`
   }
 `
 
-const ProductContent = styled.div``
-
-const BackButton = styled.div`
+const BackButton = styled(NavLink)`
   text-decoration: none;
   color: var(--color-grey);
   font-style: italic;
