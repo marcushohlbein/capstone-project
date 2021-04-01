@@ -95,7 +95,7 @@ const DropdownButton = styled.div`
   background: var(--color-lightgrey);
   color: var(--color-grey);
   font-weight: 600;
-  font-size: 1em;
+  font-size: 0.9em;
   cursor: pointer;
   border-radius: ${props => (props.isActive ? '5px 5px 0px 0px' : '5px')};
   &:after {
