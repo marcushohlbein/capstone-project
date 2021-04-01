@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { useHistory } from 'react-router-dom'
+import Dropdown from '../Dropdown/Dropdown'
 
 export default function SearchBar() {
-  const { push } = useHistory()
   return (
-    <SearchBarForm onSubmit={handleSubmit}>
+    <SearchBarForm>
+      <Dropdown />
       <SearchInput
         name="q"
         required
@@ -13,21 +13,17 @@ export default function SearchBar() {
       ></SearchInput>
     </SearchBarForm>
   )
-
-  function handleSubmit(event) {
-    const form = event.target
-    const { q: query } = form.elements
-    push(`/?q=${query.value}`)
-  }
 }
 
 const SearchBarForm = styled.form`
+  display: flex;
   padding: 5px 10px;
   width: 100%;
 `
 
 const SearchInput = styled.input`
   width: 100%;
+  height: 100%;
   padding: 10px;
   background-color: var(--color-lightgrey);
   color: var(--color-darkgrey);
