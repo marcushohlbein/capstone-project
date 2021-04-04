@@ -10,9 +10,8 @@ import { NavLink } from 'react-router-dom'
 
 export default function ProductDetail() {
   const { styleId } = useParams()
-  const { data, isError, error, isLoading } = useQuery(
-    ['product', styleId],
-    () => getProduct(styleId)
+  const { data, isError, error } = useQuery(['product', styleId], () =>
+    getProduct(styleId)
   )
   const modelClean = data?.model
     .split(' ')
@@ -29,7 +28,6 @@ export default function ProductDetail() {
         <BackButton exact to="..">
           zurück
         </BackButton>
-        {isLoading && 'Loading...'}
         <ProductInfo>
           <ProductName>
             {data?.brand} {modelClean}
@@ -103,7 +101,7 @@ const ProductNumber = styled.h2`
 const ProductImage = styled.img`
   width: 100%;
   height: auto;
-  padding: 5px;
+  padding: 15px;
   background: white;
   border: 1px solid var(--color-gray);
 `

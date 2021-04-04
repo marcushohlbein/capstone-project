@@ -1,14 +1,23 @@
 import React from 'react'
+import { useLocation } from 'react-router'
 import styled from 'styled-components/macro'
 import Dropdown from '../Dropdown/Dropdown'
 
 export default function SearchBar() {
+  function useQuery() {
+    return new URLSearchParams(useLocation().search)
+  }
+  const query = useQuery()
+
   return (
     <SearchBarForm>
       <Dropdown />
       <SearchInput
         name="q"
+        type="search"
         required
+        autocomplete="off"
+        defaultValue={query.get('q') ?? ''}
         placeholder="z.B. Modell oder Marke"
       ></SearchInput>
     </SearchBarForm>
