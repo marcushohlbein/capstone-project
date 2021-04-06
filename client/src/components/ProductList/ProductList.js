@@ -25,13 +25,7 @@ export default function ProductList(props) {
   }
 
   return (
-    <ListItem
-      as={NavLink}
-      exact
-      to={{
-        pathname: `/${styleId}`,
-      }}
-    >
+    <ListItem as={NavLink} exact to={`/${styleId}`}>
       <Image src={media.imageUrl} alt={brand + ' - ' + model} />
       <Info>
         <Brand>{brand}</Brand>

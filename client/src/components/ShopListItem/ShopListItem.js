@@ -47,7 +47,8 @@ ShopListItem.propTypes = {
 }
 
 function gotoLink(url) {
-  window.open(url, '_blank')
+  window.location.href = url
+  //window.open(url, '_blank')
 }
 
 const ListContainer = styled.section`

@@ -15,6 +15,7 @@ app.use(require('./routes/error'))
 
 app.get('/api/v1/products/', async (req, res, next) => {
   const dbQuery = getDbQuery(req.query)
+  console.log(dbQuery)
   res.status(200).json(await Product.find(dbQuery).limit(48).catch(next))
 })
 

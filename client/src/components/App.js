@@ -36,7 +36,7 @@ export default function App() {
               ))}
             </ProductsContainer>
           </Route>
-          <Route path="/:styleId" children={<ProductDetail />} />
+          <Route path="/:styleId" component={ProductDetail} />
         </Switch>
       </ContentContainer>
     </AppGrid>
